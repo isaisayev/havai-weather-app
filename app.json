@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "HAVAİ",
+    "slug": "havai-weather",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "havai",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.havai.weather"
+    },
+    "android": {
+      "package": "com.havai.weather",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png",
+        "backgroundColor": "#080d22"
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "HAVAİ sizin olduğunuz ərazinin dəqiq hava məlumatını göstərmək üçün konumunuzdan istifadə edir."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#4b8eef"
+        }
+      ],
+      "expo-web-browser",
+      "expo-video",
+      "@react-native-community/datetimepicker"
+    ],
+    "extra": {
+      "supabaseUrl": "https://zeqjmrkswiquipntuylz.supabase.co",
+      "supabaseAnonKey": "SET_IN_src/lib/config.ts",
+      "apiBaseUrl": "https://weathermind-nu.vercel.app",
+      "eas": {
+        "projectId": "c08d3a73-6592-4b4d-b2e2-0482c2f100aa"
+      }
+    }
+  }
+}
